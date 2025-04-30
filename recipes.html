@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Αυθεντικές μεσογειακές συνταγές με Mitselos Olive Oil.">
+  <meta name="keywords" content="Mitselos, συνταγές, ελαιόλαδο, μεσογειακή διατροφή, Messinia">
+  <meta property="og:title" content="Μεσογειακές Συνταγές - Mitselos Olive Oil">
+  <meta property="og:description" content="Ανακαλύψτε μοναδικές συνταγές με το αγνό ελαιόλαδο Mitselos.">
+  <meta property="og:image" content="https://mitselosoliveoil.gr/greek_salad.jpg">
+  <meta property="og:type" content="website">
+
+  <title>Μεσογειακές Συνταγές - Mitselos Olive Oil</title>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+
+    html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffaf2;
+      color: #4a3b2f;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      padding: 0.8rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: start;
+  margin-left: 20px;
+  text-align: center;
+}
+.logo-img {
+  height: 60px;
+  width: auto;
+  margin-bottom: 5px;
+}
+.logo-link {
+  text-decoration: none;
+}
+.logo-link h1 {
+  font-size: 2.2rem;
+  color: #a57b4a;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+.logo-link:hover h1 {
+  color: #8c6b45;
+}
+
+nav {
+  margin-left: -260px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  position: relative;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #4a3b2f;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #a57b4a;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 60%;
+}
+nav ul li a:hover {
+  color: #a57b4a;
+}
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      flex-direction: column;
+    }
+    .dropdown-content li a {
+      padding: 10px 20px;
+      display: block;
+    }
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+    .cart-icon a {
+      color: #4a3b2f;
+      text-decoration: none;
+      font-size: 1.5rem;
+      position: relative;
+    }
+    #cart-count {
+      background: red;
+      color: white;
+      font-size: 0.7rem;
+      padding: 3px 6px;
+      border-radius: 50%;
+      position: absolute;
+      top: -8px;
+      right: -10px;
+    }
+    .recipes-container {
+      max-width: 1200px;
+      margin: 160px auto 50px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      padding: 0 20px;
+    }
+    .recipe-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 300px;
+      overflow: hidden;
+      text-align: left;
+      transition: transform 0.3s;
+    }
+    .recipe-card:hover {
+      transform: translateY(-8px);
+    }
+    .recipe-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .recipe-content {
+      padding: 20px;
+    }
+    .recipe-content h3 {
+      margin-top: 0;
+      color: #a57b4a;
+    }
+    .recipes-title {
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  color: #c49a6c; /* εσωτερικό */
+  -webkit-text-stroke: 1.2px white;; /* χρυσό περίγραμμα */
+  text-align: center;
+  letter-spacing: 4px;
+  z-index: 2;
+  position: relative;
+}
+
+
+.recipes-title-section {
+  min-height: 100vh;
+  background-image: url('image7.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.recipes-title-section .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.recipes-title-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.4) 0%,
+    rgba(0,0,0,0.2) 40%,
+    rgba(0,0,0,0) 100%
+  );
+  z-index: 0;
+}
+
+.recipes-title-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.recipes-subtitle-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #c49a6c;
+  -webkit-text-stroke: 0.8px white;
+}
+
+
+.recipes-divider {
+  width: 50px;
+  height: 1.5px;
+  background-color: #a57b4a;
+  border-radius: 2px;
+}
+
+.recipes-subtitle {
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+}
+
+
+    .btn {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  color: #a57b4a;
+  border: 1.5px solid #a57b4a;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none
+}
+
+.btn:hover {
+  background: #a57b4a;
+  color: white;
+  box-shadow: 0 4px 20px rgba(165, 123, 74, 0.5);
+  transform: scale(1.08);
+}
+.discover-btn {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 500;
+  font-size: 1.05rem;
+  padding: 16px 32px;
+  backdrop-filter: blur(6px);
+  border: 2px solid #a57b4a;
+  color: #fff;
+  letter-spacing: 1.4px;
+  transition: all 0.3s ease;
+}
+
+.discover-btn:hover {
+  background: #a57b4a;
+  color: white;
+  box-shadow: 0 8px 24px rgba(165, 123, 74, 0.6);
+  transform: scale(1.08);
+}
+
+    footer {
+      background: #6b4f32;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    .language-switcher {
+  position: absolute;
+  top: 15px;
+  right: 110px;
+  display: flex;
+  gap: 8px;
+  z-index: 1001;
+}
+
+.flag-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.flag-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.flag-btn img {
+  height: 20px;
+  width: auto;
+  border-radius: 3px;
+}
+
+.floating-social-icons {
+  position: fixed;
+  top: 40%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 9999;
+}
+
+.floating-social-icons a {
+  background: white;
+  color: #a57b4a;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.floating-social-icons a:hover {
+  background: #a57b4a;
+  color: white;
+  transform: scale(1.2) translateX(10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.hero-button {
+  background: white;
+  color: #a57b4a;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 28px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background: #a57b4a;
+  color: white;
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+  </style>
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="favicon.png" alt="Λογότυπο" class="logo-img">
+        <h1>Mitselos Olive Oil</h1>
+      </a>
+    </div>    
+  
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Αρχική</a></li>
+        <li><a href="index.html#products">Προϊόντα</a></li>
+        <li><a href="index.html#about">Η Ιστορία μας</a></li>
+        <li><a href="index.html#contact">Επικοινωνία</a></li>
+        <li class="dropdown">
+          <a href="#">Newsletter</a>
+          <ul class="dropdown-content">
+            <li><a href="recipes.html" class="active">Συνταγές</a></li>
+            <li><a href="news.html">Νέα</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  
+    <div class="cart-icon">
+      <a href="cart.html">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+    </div>
+  
+    <div class="language-switcher" id="language-switcher">
+      <button class="flag-btn" onclick="setLanguage('el')">
+        <img src="greece-flag.png" alt="GR">
+      </button>
+      <button class="flag-btn" onclick="setLanguage('en')">
+        <img src="uk-flag.png" alt="EN">
+      </button>
+    </div>    
+    
+  </header> 
+   
+    <section class="recipes-title-section">
+      <h2 class="recipes-title">Μεσογειακές Συνταγές</h2>
+      <div class="recipes-subtitle-wrap">
+        <span class="signature">με Mitselos Olive Oil</span>
+        <div class="recipes-divider"></div>
+      </div>
+      <p class="recipes-subtitle">Αυθεντικές γεύσεις από την καρδιά της Μεσογείου</p>
+      <a href="#recipes" class="hero-button">ΑΝΑΚΑΛΥΨΤΕ ΤΙΣ ΣΥΝΤΑΓΕΣ</a>
+
+    </section>
+    
+    <section class="recipes-container" id="recipes">
+    <div class="recipe-card">
+    <img src="greek_salad.jpg" alt="Ελληνική Σαλάτα">
+    <div class="recipe-content">
+      <h3>Ελληνική Σαλάτα</h3>
+      <p>Δροσερή και αυθεντική, με αγνό Mitselos Olive Oil.</p>
+      <a href="#" class="btn">Δείτε τη Συνταγή</a>
+    </div>
+  </div>
+  <div class="recipe-card">
+    <img src="ntakos.jpg" alt="Παραδοσιακός Ντάκος">
+    <div class="recipe-content">
+      <h3>Παραδοσιακός Ντάκος</h3>
+      <p>Παραδοσιακα ντάκος με ντομάτα , φέτα και φυσικα ελαιόλαδο.</p>
+      <a href="#" class="btn">Δείτε τη Συνταγή</a>
+    </div>
+  </div>
+  <div class="recipe-card">
+    <img src="fava-santorinis.jpg" alt="Φάβα Σαντορίνης">
+    <div class="recipe-content">
+      <h3>Φάβα Σαντορίνης</h3>
+      <p>Κρεμώδης και γεμάτη αυθεντικότητα,ιδανική για κάθε τραπέζι.</p>
+      <a href="#" class="btn">Δείτε τη Συνταγή</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Mitselos Olive Oil - Όλα τα δικαιώματα διατηρούνται.</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const header = document.getElementById("main-header");
+    if (header) {
+      const headerHeight = header.offsetHeight;
+      document.documentElement.style.scrollPaddingTop = headerHeight + "px";
+    }
+  });
+  </script>  
+
+<script>
+  const translations = {
+    el: {
+      navHome: "Αρχική",
+      navProducts: "Προϊόντα",
+      navAbout: "Η Ιστορία μας",
+      navContact: "Επικοινωνία",
+      newsletter: "Newsletter",
+      recipes: "Συνταγές",
+      news: "Νέα"
+    },
+    en: {
+      navHome: "Home",
+      navProducts: "Products",
+      navAbout: "Our Story",
+      navContact: "Contact",
+      newsletter: "Newsletter",
+      recipes: "Recipes",
+      news: "News"
+    }
+  };
+  
+  function setLanguage(lang) {
+    const t = translations[lang];
+    const navLinks = document.querySelectorAll("#main-nav ul li a");
+  
+    if (navLinks.length >= 5) {
+      navLinks[0].innerText = t.navHome;
+      navLinks[1].innerText = t.navProducts;
+      navLinks[2].innerText = t.navAbout;
+      navLinks[3].innerText = t.navContact;
+      navLinks[4].innerText = t.newsletter;
+  
+      const dropdownItems = document.querySelectorAll(".dropdown-content li a");
+      if (dropdownItems.length >= 2) {
+        dropdownItems[0].innerText = t.recipes;
+        dropdownItems[1].innerText = t.news;
+      }
+    }
+  }
+  </script>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCount = cart.reduce((total, item) => total + item.qty, 0);
+    document.getElementById("cart-count").innerText = cartCount;
+  });
+</script>
+<div class="floating-social-icons">
+  <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+  <a href="https://twitter.com/yourprofile" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium ελληνικό ελαιόλαδο από την οικογένεια Γιαννόπουλου στη Μεσσηνία.">
+  <meta name="keywords" content="ελαιόλαδο, premium olive oil, Messinia, Mitselos,olive oil, extra virgin olive oil, Εξαιρετικό Παρθένο">
+
+  <!-- Open Graph SEO για Κοινωνικά Δίκτυα -->
+  <meta property="og:title" content="Mitselos Olive Oil">
+  <meta property="og:description" content="Premium ελληνικό ελαιόλαδο από την καρδιά της Μεσσηνίας.">
+  <meta property="og:image" content="https://mitselosoliveoil.gr/sigkomidi.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mitselosoliveoil.gr/">
+
+  <title>Το Καλάθι σας - Mitselos Olive Oil</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    
+
+    body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4ede4;
+    color: #4a3b2f;
+    text-align: center;
+}
+
+.btn {
+    background: rgba(255, 255, 255, 0.05); /* Ελάχιστη διαφάνεια */
+    backdrop-filter: blur(4px); /* Λίγο θάμπωμα πίσω */
+    color: #a57b4a;
+    border: 1.5px solid #a57b4a;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background: #a57b4a;
+    color: white;
+    box-shadow: 0 4px 20px rgba(165, 123, 74, 0.5);
+    transform: scale(1.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+   
+    /* Premium Header */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7); /* Διάφανο λευκό */
+    backdrop-filter: blur(8px); /* Θάμπωμα φόντου */
+    color: #4a3b2f;
+    padding: 0.6rem 1.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.45s ease;
+}
+
+/* Premium Λογότυπο */
+header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #a57b4a;
+    margin: 0;
+    justify-self: start; /* Κάνει το λογότυπο να κολλήσει αριστερά στο grid */
+    margin-left: 20px; /* Μικρό κενό από τα αριστερά */
+}
+
+header h1:hover {
+  color: #8c6b45;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+    .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* Εξασφαλίζει πλήρες πλάτος */
+    height: 100vh; /* Εξασφαλίζει πλήρες ύψος */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    border-radius: 12px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    backdrop-filter: none;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 1.5s ease, transform 1.5s ease; /* ✨ πρόσθεσα transform transition εδώ */
+}
+
+.hero-text h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1.4rem;
+  margin-top: 15px;
+  font-weight: 300;
+}
+
+/* Μενού */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    position: relative;
+    color: #4a3b2f;
+    text-decoration: none;
+    font-weight: 500; /* Όχι πολύ bold */
+    font-size: 1.05rem; /* Πιο κομψό μέγεθος */
+    letter-spacing: 0.5px; /* Ελαφρύ άνοιγμα */
+    padding: 10px 15px; /* Περισσότερο padding */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a57b4a;
+    transform: scale(1.05); /* Λίγο μεγέθυνση στο hover */
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #a57b4a;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 60%;
+}
+
+/* Responsive αλλαγές */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+    .floating-social-icons {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 9999;
+}
+
+.floating-social-icons a {
+    background: white;
+    color: #a57b4a;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
+    left: 0;
+}
+
+.floating-social-icons a:hover {
+    background: #a57b4a;
+    color: white;
+    transform: scale(1.2) translateX(10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Κρύβονται στα κινητά */
+@media (max-width: 768px) {
+    .floating-social-icons {
+        display: none;
+    }
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: start;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.logo-img {
+  height: 60px; /* Πιο μικρό για να μην καλύπτει το header */
+  width: auto;
+  margin-bottom: 5px; /* Λίγο κενό ανάμεσα στο δέντρο και στο κείμενο */
+}
+
+.logo-container h1 {
+  font-size: 2.2rem; /* Λίγο πιο μικρό αλλά elegant */
+  color: #a57b4a;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  margin: 0;
+}
+
+.logo-link {
+  text-decoration: none; /* Βγάζει την υπογράμμιση */
+}
+
+.logo-link h1 {
+  color: #a57b4a;
+  transition: color 0.3s ease;
+}
+
+.logo-link:hover h1 {
+  color: #8c6b45; /* Αλλάζει χρώμα στο hover για καλύτερη αίσθηση */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+    display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Εξασφαλίζει ότι κάθε link πιάνει όλο το πλάτος */
+  padding: 10px 0; /* Μικρό κενό πάνω-κάτω */
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 8px;
+  transition: all 0.3s ease; /* ⭐ κάνει το άνοιγμα πιο μαλακό */
+  transform: translateY(10px); /* ⭐ αρχίζει λίγο πιο κάτω */
+}
+
+.dropdown-content li {
+  width: 100%;
+}
+
+.dropdown-content li a {
+  width: 100%;
+  padding: 12px 20px;
+  text-align: left; /* Για να είναι το κείμενο αριστερά */
+  box-sizing: border-box; /* Για σωστό padding */
+}
+
+.dropdown-content li a:hover {
+  background-color: #f4ede4;
+  color: #a57b4a;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px); /* ⭐ Ομαλή επιστροφή στη θέση του */
+}
+@media (max-width: 768px) {
+    /* ✅ Μετακίνηση του καλαθιού πιο αριστερά */
+    .cart-icon {
+        right: 20px; /* Ήταν 40px - το μετακινούμε πιο αριστερά */
+    }
+
+    /* ✅ Μετακίνηση των σημαιών πιο αριστερά */
+    .language-switcher {
+        right: 70px; /* Ήταν 90px - μετακίνηση αριστερά για να μην πέφτει πάνω στο καλάθι */
+    }
+
+    /* ✅ Responsive cookie banner */
+    .cookie-banner {
+        flex-direction: column; /* Στοιχίζει τα στοιχεία το ένα κάτω από το άλλο */
+        text-align: center; /* Στοιχίζει το κείμενο στο κέντρο */
+        padding: 10px; /* Μειώνει το padding για μικρότερη οθόνη */
+    }
+
+    /* ✅ Κουμπί αποδοχής cookies */
+    .cookie-banner button {
+        margin-left: 0; /* Στοιχίζει το κουμπί στο κέντρο */
+        transform: none; /* Αφαιρεί περιττή μετακίνηση */
+    }
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #f8f1e9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.contact-info {
+    text-align: center;
+    max-width: 300px;
+    padding: 10px;
+}
+
+.contact-info i {
+    font-size: 2rem;
+    color: #a57b4a;
+}
+
+.contact-info h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #4a3b2f;
+}
+
+.contact-info a {
+    color: #a57b4a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.language-switcher {
+  position: absolute;
+  top: 15px;
+  right: 110px;
+  display: flex;
+  gap: 8px;
+  z-index: 1001;
+}
+
+.flag-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.flag-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.flag-btn img {
+  height: 20px;
+  width: auto;
+  border-radius: 3px;
+}
+
+.cart-icon {
+    position: absolute;
+    top: 15px;
+    right: 80px;
+    font-size: 1.5rem;
+}
+
+.cart-icon a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon i {
+    font-size: 1.8rem;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: rgb(17, 1, 1);
+    color: white;
+    font-size: 0.8rem;
+    padding: 4px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+    .cart-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      min-height: 400px;
+    }
+  
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+      transition: all 0.3s ease;
+    }
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .cart-info {
+      flex: 1;
+      margin-left: 15px;
+      text-align: left;
+    }
+    .cart-info h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .cart-info p {
+      margin: 5px 0 0;
+      color: #8c6b45;
+    }
+    .cart-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cart-actions button {
+      border: 1px solid #a57b4a;
+      background: none;
+      color: #a57b4a;
+      padding: 6px 10px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .cart-actions button:hover {
+      background: #a57b4a;
+      color: white;
+    }
+    .total {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #a57b4a;
+      font-weight: bold;
+    }
+    .checkout-btn {
+      display: inline-block;
+      background: #a57b4a;
+      color: white;
+      padding: 14px 30px;
+      border-radius: 50px;
+      margin-top: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .checkout-btn:hover {
+      background: #8c6b45;
+      transform: scale(1.05);
+    }
+    .empty-cart {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #6d5c4d;
+      margin-top: 100px;
+    }
+    .back-to-shop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #a57b4a;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background 0.3s, transform 0.3s;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .back-to-shop:hover {
+      background: #8c6b45;
+      transform: scale(1.1);
+    }
+    @media (max-width: 768px) {
+      .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .cart-actions {
+        margin-top: 10px;
+      }
+      .total {
+        text-align: center;
+      }
+    }
+
+    #home small {
+    display: block;
+    font-size: 0.9rem;
+    color: #a57b4a;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#home h2 {
+    font-size: 2.4rem;
+    color: #4a3b2f;
+    margin-bottom: 10px;
+    animation: fadeInDown 1.2s ease-out;
+}
+
+#home p {
+    font-size: 1.1rem;
+    color: #5c493a;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.product {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.product.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-element.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+  </style>
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="logo-container">
+        <img src="favicon.png" alt="Λογότυπο" class="logo-img">
+        <a href="index.html#home" class="logo-link"><h1>Mitselos Olive Oil</h1></a>
+    </div>
+          
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html#home">Αρχική</a></li>
+            <li><a href="index.html#products">Προϊόντα</a></li>
+            <li><a href="index.html#about">Η Ιστορία μας</a></li>
+            <li><a href="index.html#contact">Επικοινωνία</a></li>
+            <li class="dropdown">
+                <a href="#">Newsletter</a>
+                <ul class="dropdown-content">
+                    <li><a href="recipes.html">Συνταγές</a></li>
+                    <li><a href="news.html">Νέα</a></li>                        
+                </ul>
+              </li>
+              
+        </ul>
+    </nav>
+
+    <div class="cart-icon">
+        <a href="cart.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </a>
+    </div>
+
+    <div class="language-switcher" id="language-switcher">
+        <button class="flag-btn" onclick="setLanguage('el')">
+          <img src="greece-flag.png" alt="GR">
+        </button>
+        <button class="flag-btn" onclick="setLanguage('en')">
+          <img src="uk-flag.png" alt="EN">
+        </button>
+      </div> 
+</header> 
+
+<div class="cart-container" id="cart-container">
+  <!-- Δυναμικό περιεχόμενο -->
+</div>
+
+<a href="index.html" class="back-to-shop" title="Επιστροφή στο κατάστημα">🏠</a>
+
+<script>
+  const cartContainer = document.getElementById('cart-container');
+  
+  function renderCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    document.getElementById('cart-count').textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+    cartContainer.innerHTML = '';
+  
+    if (cart.length === 0) {
+      cartContainer.innerHTML = `<p class="empty-cart">Το καλάθι σας είναι άδειο.</p>`;
+      return;
+    }
+  
+    let total = 0;
+  
+    cart.forEach((item, index) => {
+      total += item.price * item.qty;
+  
+      const cartItem = document.createElement('div');
+      cartItem.className = 'cart-item';
+      cartItem.innerHTML = `
+        <img src="${item.img}" alt="${item.name}">
+        <div class="cart-info">
+          <h3>${item.name}</h3>
+          <p>€${item.price.toFixed(2)} x ${item.qty}</p>
+        </div>
+        <div class="cart-actions">
+          <button onclick="changeQty(${index}, 1)">+</button>
+          <button onclick="changeQty(${index}, -1)">-</button>
+          <button onclick="removeItem(${index})">&times;</button>
+        </div>
+      `;
+      cartContainer.appendChild(cartItem);
+    });
+  
+    const totalDiv = document.createElement('div');
+    totalDiv.className = 'total';
+    totalDiv.innerHTML = `
+      Σύνολο: €${total.toFixed(2)}
+      <br><a href="checkout.html" class="checkout-btn">Συνέχεια στην Πληρωμή</a>
+    `;
+  
+    cartContainer.appendChild(totalDiv);
+  }
+  
+  function changeQty(index, change) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (!cart[index]) return;
+  
+    cart[index].qty += change;
+    if (cart[index].qty <= 0) cart.splice(index, 1);
+  
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+  }
+  
+  function removeItem(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+  }
+  
+  // Φορτώνουμε το καλάθι στην αρχή
+  renderCart();
+  
+  // -------- ΝΕΟ: Ελέγχουμε αν αλλάξει το localStorage ---------
+  window.addEventListener('storage', function(e) {
+    if (e.key === 'cart') {
+      renderCart();
+    }
+  });
+  </script>  
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Νέα - Mitselos Olive Oil</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #4a3b2f;
+    }
+
+    .main-background {
+      background: url('image7.webp') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      padding-top: 120px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      padding: 0.6rem 1.5rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-self: start;
+      margin-left: 20px;
+      text-align: center;
+    }
+
+    .logo-img {
+      height: 60px;
+      margin-bottom: 5px;
+    }
+
+    .logo-link {
+      text-decoration: none;
+    }
+
+    .logo-link h1 {
+      font-size: 2.2rem;
+      color: #a57b4a;
+      font-family: 'Great Vibes', cursive;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: #4a3b2f;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.05rem;
+      padding: 10px 15px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #a57b4a;
+    }
+
+    .cart-icon {
+      position: absolute;
+      top: 15px;
+      right: 80px;
+    }
+
+    .cart-icon a {
+      color: #4a3b2f;
+      text-decoration: none;
+      position: relative;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background: red;
+      color: white;
+      font-size: 0.8rem;
+      padding: 4px 7px;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .flag-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    .flag-btn img {
+      height: 20px;
+      border-radius: 3px;
+    }
+
+    .news-wrapper {
+      max-width: 1100px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 60px 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .news-wrapper h2 {
+      text-align: center;
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
+
+    .news-wrapper .subtitle {
+      text-align: center;
+      color: #6d5c4d;
+      margin-bottom: 40px;
+    }
+
+    .news-container {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .news-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      padding: 40px;
+      gap: 40px;
+    }
+
+    .news-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .news-image img {
+      width: 100%;
+      max-width: 240px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .news-content h3 {
+      font-size: 1.5rem;
+      color: #a57b4a;
+      margin-bottom: 10px;
+    }
+
+    .news-content p {
+      font-size: 1rem;
+      color: #4a3b2f;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .news-block, .news-block.reverse {
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      .news-image img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="main-header">
+    <div class="logo-container">
+      <img src="favicon.png" alt="Λογότυπο" class="logo-img">
+      <a href="index.html#home" class="logo-link"><h1>Mitselos Olive Oil</h1></a>
+    </div>
+    
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html#home">Αρχική</a></li>
+        <li><a href="index.html#products">Προϊόντα</a></li>
+        <li><a href="index.html#about">Η Ιστορία μας</a></li>
+        <li><a href="index.html#contact">Επικοινωνία</a></li>
+        <li><a href="news.html">Νέα</a></li>
+      </ul>
+    </nav>
+
+    <div class="cart-icon">
+      <a href="cart.html">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+    </div>
+
+    <div class="language-switcher">
+      <button class="flag-btn"><img src="greece-flag.png" alt="GR"></button>
+      <button class="flag-btn"><img src="uk-flag.png" alt="EN"></button>
+    </div>
+  </header>
+
+  <div class="main-background">
+    <div class="news-wrapper">
+      <h2>Νέα & Ανακοινώσεις</h2>
+      <p class="subtitle">Τα τελευταία νέα από τον κόσμο του Mitselos Olive Oil</p>
+
+      <div class="news-container">
+        <!-- Νέα 1 -->
+        <div class="news-block">
+          <div class="news-image">
+            <img src="gold.png" alt="Athena Gold Award">
+          </div>
+          <div class="news-content">
+            <h3>Πρώτο Βραβείο</h3>
+            <p>Περιγραφή της είδησης με premium συνεργάτες ή βραβεία όπως το Athena Gold 2025.</p>
+          </div>
+        </div>
+
+        <!-- Νέα 2 -->
+        <div class="news-block reverse">
+          <div class="news-image">
+            <img src="festival.jpg" alt="Φεστιβάλ Ελιάς">
+          </div>
+          <div class="news-content">
+            <h3>Φεστιβάλ Ελιάς 2025</h3>
+            <p>Ελάτε στο φεστιβάλ ελιάς στη Μεσσηνία! Γευσιγνωσίες και μουσική.</p>
+          </div>
+        </div>
+
+        <!-- Νέα 3 -->
+        <div class="news-block">
+          <div class="news-image">
+            <img src="image6.jpg" alt="Tip Υγείας">
+          </div>
+          <div class="news-content">
+            <h3>Tip Υγείας</h3>
+            <p>Ξεκινήστε τη μέρα σας με μια κουταλιά ελαιόλαδο – ιδανικό για το ανοσοποιητικό και την πέψη.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

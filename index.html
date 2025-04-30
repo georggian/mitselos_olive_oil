@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium ελληνικό ελαιόλαδο από την οικογένεια Γιαννόπουλου στη Μεσσηνία.">
+    <meta name="keywords" content="ελαιόλαδο, premium olive oil, Messinia, Mitselos,olive oil, extra virgin olive oil, Εξαιρετικό Παρθένο">
+
+    <!-- Open Graph SEO για Κοινωνικά Δίκτυα -->
+    <meta property="og:title" content="Mitselos Olive Oil">
+    <meta property="og:description" content="Premium ελληνικό ελαιόλαδο από την καρδιά της Μεσσηνίας.">
+    <meta property="og:image" content="https://mitselosoliveoil.gr/sigkomidi.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mitselosoliveoil.gr/">
+
+
+
+    <title>Mitselos Olive Oil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+      
+    <style>
+.btn {
+    background: rgba(255, 255, 255, 0.05); /* Ελάχιστη διαφάνεια */
+    backdrop-filter: blur(4px); /* Λίγο θάμπωμα πίσω */
+    color: #a57b4a;
+    border: 1.5px solid #a57b4a;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background: #a57b4a;
+    color: white;
+    box-shadow: 0 4px 20px rgba(165, 123, 74, 0.5);
+    transform: scale(1.08);
+}
+
+
+.main-background {
+    background: url('image7.webp') no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 120px; /* Εδώ να πάει! */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4ede4;
+    color: #4a3b2f;
+    text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Premium Header */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7); /* Διάφανο λευκό */
+    backdrop-filter: blur(8px); /* Θάμπωμα φόντου */
+    color: #4a3b2f;
+    padding: 0.6rem 1.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.45s ease;
+}
+
+/* Premium Λογότυπο */
+header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #a57b4a;
+    margin: 0;
+    justify-self: start; /* Κάνει το λογότυπο να κολλήσει αριστερά στο grid */
+    margin-left: 20px; /* Μικρό κενό από τα αριστερά */
+}
+
+header h1:hover {
+  color: #8c6b45;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Μενού */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    position: relative;
+    color: #4a3b2f;
+    text-decoration: none;
+    font-weight: 500; /* Όχι πολύ bold */
+    font-size: 1.05rem; /* Πιο κομψό μέγεθος */
+    letter-spacing: 0.5px; /* Ελαφρύ άνοιγμα */
+    padding: 10px 15px; /* Περισσότερο padding */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a57b4a;
+    transform: scale(1.05); /* Λίγο μεγέθυνση στο hover */
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #a57b4a;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 60%;
+}
+
+/* Responsive αλλαγές */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
+        .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* Εξασφαλίζει πλήρες πλάτος */
+    height: 100vh; /* Εξασφαλίζει πλήρες ύψος */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    border-radius: 12px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    backdrop-filter: none;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 1.5s ease, transform 1.5s ease; /* ✨ πρόσθεσα transform transition εδώ */
+}
+
+.hero-text h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1.4rem;
+  margin-top: 15px;
+  font-weight: 300;
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Γεμίζει όλη την οθόνη */
+    display: block;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 0;
+} 
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            background: #f8f1e9;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-top: 20px;
+        }
+        .product img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .product-card {
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card .price {
+    font-size: 1.4rem;
+    color: #a57b4a;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+    margin: 20px 0;
+}
+
+.price .amount {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #a57b4a;
+}
+
+.price .unit {
+    font-size: 1.1rem;
+    color: #8c6b45;
+}
+
+/* --------- Premium ΤΙΤΛΟΣ Προϊόντος ---------- */
+#products h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #4a3b2f;
+    letter-spacing: 0.8px;
+    margin-top: 20px;
+}
+
+/* --------- Premium ΠΕΡΙΓΡΑΦΗ Προϊόντος ---------- */
+#products .product p:nth-of-type(1) {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #6d5c4d;
+    line-height: 1.7;
+    margin: 10px 0 20px;
+}
+
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #8c6b45;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        form button {
+            background: #a57b4a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        form button:hover {
+            background: #8c6b45;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 15px;
+            background: #6b4f32;
+            color: white;
+            font-size: 0.9rem;
+        }
+        .language-switcher {
+  position: absolute;
+  top: 15px;
+  right: 110px;
+  display: flex;
+  gap: 8px;
+  z-index: 1001;
+}
+
+.flag-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.flag-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.flag-btn img {
+  height: 20px;
+  width: auto;
+  border-radius: 3px;
+}
+
+.cart-icon {
+    position: absolute;
+    top: 15px;
+    right: 80px;
+    font-size: 1.5rem;
+}
+
+.cart-icon a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon i {
+    font-size: 1.8rem;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 0.8rem;
+    padding: 4px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important; /* Όλα αριστερά */
+    z-index: 9999;
+}
+
+.cookie-banner p {
+    margin: 0;
+    flex-grow: 1;
+    text-align: left; /* Το κείμενο ευθυγραμμισμένο αριστερά */
+}
+
+.cookie-banner button {
+    background: #a57b4a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: auto !important; /* Πάει πιο αριστερά */
+    transform: translateX(-200px) !important; /* Ακόμα πιο αριστερά */
+}
+
+.cookie-banner button:hover {
+    background: #8c6b45;
+}
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #f8f1e9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.contact-info {
+    text-align: center;
+    max-width: 300px;
+    padding: 10px;
+}
+
+.contact-info i {
+    font-size: 2rem;
+    color: #a57b4a;
+}
+
+.contact-info h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #4a3b2f;
+}
+
+.contact-info a {
+    color: #a57b4a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 🎯 Responsive Design - Για κινητά και tablets */
+@media (max-width: 768px) {
+    /* ✅ Μετακίνηση του καλαθιού πιο αριστερά */
+    .cart-icon {
+        right: 20px; /* Ήταν 40px - το μετακινούμε πιο αριστερά */
+    }
+
+    /* ✅ Μετακίνηση των σημαιών πιο αριστερά */
+    .language-switcher {
+        right: 70px; /* Ήταν 90px - μετακίνηση αριστερά για να μην πέφτει πάνω στο καλάθι */
+    }
+
+    /* ✅ Responsive cookie banner */
+    .cookie-banner {
+        flex-direction: column; /* Στοιχίζει τα στοιχεία το ένα κάτω από το άλλο */
+        text-align: center; /* Στοιχίζει το κείμενο στο κέντρο */
+        padding: 10px; /* Μειώνει το padding για μικρότερη οθόνη */
+    }
+
+    /* ✅ Κουμπί αποδοχής cookies */
+    .cookie-banner button {
+        margin-left: 0; /* Στοιχίζει το κουμπί στο κέντρο */
+        transform: none; /* Αφαιρεί περιττή μετακίνηση */
+    }
+}
+#products {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.floating-social-icons {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 9999;
+}
+
+.floating-social-icons a {
+    background: white;
+    color: #a57b4a;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
+    left: 0;
+}
+
+.floating-social-icons a:hover {
+    background: #a57b4a;
+    color: white;
+    transform: scale(1.2) translateX(10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Κρύβονται στα κινητά */
+@media (max-width: 768px) {
+    .floating-social-icons {
+        display: none;
+    }
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: start;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.logo-img {
+  height: 60px; /* Πιο μικρό για να μην καλύπτει το header */
+  width: auto;
+  margin-bottom: 5px; /* Λίγο κενό ανάμεσα στο δέντρο και στο κείμενο */
+}
+
+.logo-container h1 {
+  font-size: 2.2rem; /* Λίγο πιο μικρό αλλά elegant */
+  color: #a57b4a;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  margin: 0;
+}
+
+.logo-link {
+  text-decoration: none; /* Βγάζει την υπογράμμιση */
+}
+
+.logo-link h1 {
+  color: #a57b4a;
+  transition: color 0.3s ease;
+}
+
+.logo-link:hover h1 {
+  color: #8c6b45; /* Αλλάζει χρώμα στο hover για καλύτερη αίσθηση */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+    display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Εξασφαλίζει ότι κάθε link πιάνει όλο το πλάτος */
+  padding: 10px 0; /* Μικρό κενό πάνω-κάτω */
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 8px;
+  transition: all 0.3s ease; /* ⭐ κάνει το άνοιγμα πιο μαλακό */
+  transform: translateY(10px); /* ⭐ αρχίζει λίγο πιο κάτω */
+}
+
+.dropdown-content li {
+  width: 100%;
+}
+
+.dropdown-content li a {
+  width: 100%;
+  padding: 12px 20px;
+  text-align: left; /* Για να είναι το κείμενο αριστερά */
+  box-sizing: border-box; /* Για σωστό padding */
+}
+
+.dropdown-content li a:hover {
+  background-color: #f4ede4;
+  color: #a57b4a;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px); /* ⭐ Ομαλή επιστροφή στη θέση του */
+}
+
+#home small {
+    display: block;
+    font-size: 0.9rem;
+    color: #a57b4a;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#home h2 {
+    font-size: 2.4rem;
+    color: #4a3b2f;
+    margin-bottom: 10px;
+    animation: fadeInDown 1.2s ease-out;
+}
+
+#home p {
+    font-size: 1.1rem;
+    color: #5c493a;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.product {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.product.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-element.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+    </style>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας. 
+            <a href="privacy.html">Μάθετε περισσότερα</a>
+        </p>
+        <button onclick="acceptCookies()">Αποδοχή</button>
+    </div>
+      
+    <header id="main-header">
+        <div class="logo-container">
+            <img src="favicon.png" alt="Λογότυπο" class="logo-img">
+            <a href="#home" class="logo-link"><h1>Mitselos Olive Oil</h1></a>
+        </div>
+              
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#home">Αρχική</a></li>
+                <li><a href="#products">Προϊόντα</a></li>
+                <li><a href="#about">Η Ιστορία μας</a></li>
+                <li><a href="#contact">Επικοινωνία</a></li>
+                <li class="dropdown">
+                    <a href="#">Newsletter</a>
+                    <ul class="dropdown-content">
+                        <li><a href="recipes.html">Συνταγές</a></li>
+                        <li><a href="news.html">Νέα</a></li>                        
+                    </ul>
+                  </li>
+                  
+            </ul>
+        </nav>
+    
+        <div class="cart-icon">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    
+        <div class="language-switcher" id="language-switcher">
+            <button class="flag-btn" onclick="setLanguage('el')">
+              <img src="greece-flag.png" alt="GR">
+            </button>
+            <button class="flag-btn" onclick="setLanguage('en')">
+              <img src="uk-flag.png" alt="EN">
+            </button>
+          </div> 
+    </header>    
+    
+    <!-- ✅ ΣΩΣΤΟ slider -->
+    <div class="hero">
+          
+        <div class="slider">
+            <img src="image1.jpg" class="slide active" alt="Εικόνα 1">
+            <img src="image2.jpg" class="slide" alt="Εικόνα 2">
+            <img src="image3.jpg" class="slide" alt="Εικόνα 3">
+            <img src="image4.jpg" class="slide" alt="Εικόνα 4">
+            <img src="image5.jpg" class="slide" alt="Εικόνα 5">
+            <img src="image6.jpg" class="slide" alt="Εικόνα 6">
+        </div>
+        <div class="hero-text">
+            <h1>Mitselos Olive Oil</h1>
+            <p>Η γεύση της Μεσσηνίας σε κάθε σταγόνα</p>
+          </div>
+    </div>
+    <div class="main-background">
+
+        <section id="home">
+            <small>Ανακαλύψτε την αυθεντικότητα</small>
+            <h2>Καλώς ήρθατε στο Mitselos Olive Oil</h2>
+            <p>Ένα ταξίδι γεύσης και παράδοσης από τη γη της Μεσσηνίας, κατευθείαν στο τραπέζι σας.  
+            Premium ελληνικό ελαιόλαδο, φτιαγμένο με μεράκι και αφοσίωση.</p>
+          </section>
+        
+   
+    <section id="products"> 
+        <h2>Τα Προϊόντα μας</h2>
+        <div class="product">
+            <img src="oliveoil.jpg" alt="Μπουκάλι ελαιολάδου">
+            <h3>Εξαιρετικό Παρθένο Ελαιόλαδο</h3>
+            <p>100% φυσικό, ψυχρής έκθλιψης, εξαιρετικής ποιότητας.</p>
+            <p class="price">
+                <span class="amount">€24.99</span> <span class="unit">/ 750ml</span>
+            </p>              
+            <button class="btn" onclick="addToCart()">Αγορά τώρα</button>
+        </div>
+    </section>
+    
+    <section id="about" style="padding: 60px 20px; background: #f8f1e9; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-top: 20px;">
+
+        <h2 class="fade-in-element">Η Ιστορία μας</h2>
+
+        <div class="fade-in-element" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-top: 30px;">
+            <img src="elaionas.jpg" alt="Οικογενειακός ελαιώνας" class="fade-in-element" style="width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+            <div class="fade-in-element" style="flex: 1;">
+                <h3 style="color: #a57b4a;">Οι Ρίζες μας</h3>
+                <p>Η ιστορία μας ξεκινά στο γραφικό χωριό Μηλιώτι, στην καρδιά της Μεσσηνίας. Εδώ, μέσα σε ελαιώνες αιώνων, ξεκίνησε το όνειρό μας για ένα λάδι που σέβεται τη φύση και την παράδοση.</p>
+            </div>
+        </div>
+    
+        <blockquote class="fade-in-element" style="margin: 40px auto; font-style: italic; font-size: 1.2rem; color: #8c6b45; max-width: 700px;">
+            "Κάθε σταγόνα κουβαλά τη σοφία αιώνων και την αγάπη της γης μας."
+        </blockquote>
+    
+        <div class="fade-in-element" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-top: 30px; flex-direction: row-reverse;">
+            <img src="sigkomidi.jpg" alt="Συγκομιδή ελιών" style="width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+            <div class="fade-in-element" style="flex: 1;">
+                <h3 style="color: #a57b4a;">Η Παράδοση μας</h3>
+                <p>Για γενιές, καλλιεργούμε τους ίδιους ελαιώνες με σεβασμό. Με την τεχνική της ψυχρής έκθλιψης διατηρούμε αναλλοίωτες τις θρεπτικές ιδιότητες του ελαιόκαρπου.</p>
+            </div>
+        </div>
+    
+        <div class="fade-in-element" style="margin-top: 50px;">
+            <h3 style="color: #a57b4a;">Ο Χρόνος μας</h3>
+            <ul style="list-style: none; padding: 0; margin-top: 20px;">
+                <li style="margin-bottom: 15px;"><strong>1950:</strong> Οι πρώτες ελιές φυτεύονται στο Μηλιώτι.</li>
+                <li style="margin-bottom: 15px;"><strong>1985:</strong> Η δεύτερη γενιά αναλαμβάνει τη φροντίδα των ελαιώνων.</li>
+                <li style="margin-bottom: 15px;"><strong>2025:</strong> Δημιουργία του Mitselos Olive Oil, με στόχο την εξαγωγή της παράδοσης σε όλο τον κόσμο.</li>
+            </ul>
+        </div>
+    
+    </section>
+    
+    
+    <section id="contact">
+        <h2>Επικοινωνήστε μαζί μας</h2>
+    
+        <div class="contact-container">
+            <div class="contact-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Διεύθυνση</h3>
+                <p>Αριστείδου 31 , Καλαμάτα</p>
+            </div>
+    
+            <div class="contact-info">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Τηλέφωνα Επικοινωνίας</h3>
+                <p>2721115142</p>
+                <p>6949393293</p>
+                <p>6949253429</p>
+            </div>
+    
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="georggian10@gmail.com">georgian10@gmail.com</a></p>
+
+            </div>
+            <!-- Φόρμα Επικοινωνίας -->
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Το όνομά σας" required>
+                    <input type="email" name="email" placeholder="Το email σας" required>
+                    <textarea name="message" placeholder="Το μήνυμά σας" rows="5" required></textarea>
+                    <button type="submit" class="btn">Αποστολή</button>
+                </form>
+
+            <div id="responseMessage"></div> <!-- Εδώ θα εμφανίζεται το μήνυμα επιτυχίας -->
+
+        </div>
+    
+        <!-- Ενσωμάτωση Google Map -->
+        <div class="map-container">
+            <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.626185012902!2d21.8148588!3d37.0698324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13610866cfa15a19%3A0x810cbfcd93314737!2sΜηλιώτι%20240%2014!5e0!3m2!1sel!2sgr!4v1711034567890"
+    width="100%" height="400" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+    </section>
+            <script>
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Αποτρέπει την ανανέωση της σελίδας
+            
+                let formData = new FormData(this);
+            
+                fetch("send_email.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("responseMessage").innerText = data;
+                    document.getElementById("contactForm").reset(); // Καθαρίζει τη φόρμα
+                })
+                .catch(error => console.error("Σφάλμα:", error));
+            });
+            
+            </script>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Mitselos Olive Oil - Όλα τα δικαιώματα διατηρούνται.</p>
+    </footer>
+
+        <script>
+            const translations = {
+                en: {
+                    navHome: "Home",
+                    navProducts: "Products",
+                    navAbout: "Our Story",
+                    navContact: "Contact",
+                    hero: "Authentic Luxury from the Heart of Greece",
+                    welcomeTitle: "Welcome to Mitselos Olive Oil",
+                    welcomeText: "Premium Greek olive oil with tradition and quality.",
+                    productsTitle: "Our Products",
+                    productName: "Extra Virgin Olive Oil",
+                    productDesc: "100% natural, cold-pressed, premium quality.",
+                    historyTitle: "Our Story",
+                    historyDesc: "The story of our olive oil begins in the picturesque village of Milioti, in the heart of Messinia. At an altitude of 400 meters, our family-owned olive groves enjoy abundant sunshine and fresh, clean mountain air—key factors that give our olive oil its distinct flavor and exceptional aroma. " +
+             "For generations, the GIANNOPOULOS family has cultivated this land with deep respect for tradition, employing the cold-press method to preserve all the precious nutritional properties of the olives. " +
+             "Every drop of our olive oil embodies the heritage, passion, and authenticity of our family, bringing the pure, unspoiled taste of the Messinian countryside directly to your table.",
+                    contactTitle: "Contact us",
+                    namePlaceholder: "Your name",
+                    emailPlaceholder: "Your email",
+                    messagePlaceholder: "Your message",
+                    sendButton: "Send",
+                    rights: "All rights reserved."
+                },
+                el: {
+                    navHome: "Αρχική",
+                    navProducts: "Προϊόντα",
+                    navAbout: "Η Ιστορία μας",
+                    navContact: "Επικοινωνία",
+                    hero: "Αυθεντική πολυτέλεια από την καρδιά της Ελλάδας",
+                    welcomeTitle: "Καλώς ήρθατε στο Mitselos Olive Oil",
+                    welcomeText: "Premium ελληνικό ελαιόλαδο με παράδοση και ποιότητα.",
+                    productsTitle: "Τα Προϊόντα μας",
+                    productName: "Εξαιρετικό Παρθένο Ελαιόλαδο",
+                    productDesc: "100% φυσικό, ψυχρής έκθλιψης, εξαιρετικής ποιότητας.",
+                    historyTitle: "Η Ιστορία μας",
+                    historyDesc: "Η ιστορία του ελαιολάδου μας ξεκινά στο γραφικό χωριό Μηλωτή, στην καρδιά της Μεσσηνίας. Σε υψόμετρο 400 μέτρων, οι οικογενειακοί μας ελαιώνες δέχονται την ευλογία του ήλιου και του καθαρού, δροσερού αέρα, στοιχεία που προσδίδουν στο λάδι μας τη μοναδική του γεύση και το εξαιρετικό του άρωμα. " +
+             "Η οικογένεια ΓΙΑΝΝΟΠΟΥΛΟΥ, με βαθιά αγάπη για τη γη και σεβασμό στις παραδόσεις, καλλιεργεί εδώ και γενιές τις ίδιες ρίζες, εφαρμόζοντας τη μέθοδο της ψυχρής έκθλιψης, ώστε να διατηρούνται αναλλοίωτες όλες οι θρεπτικές ιδιότητες του πολύτιμου καρπού. " +
+             "Κάθε σταγόνα από το ελαιόλαδό μας κλείνει μέσα της την ιστορία, την παράδοση και το πάθος της οικογένειάς μας, φέρνοντας στο τραπέζι σας τη γνήσια, ανόθευτη γεύση της Μεσσηνιακής γης.",
+                    contactTitle: "Επικοινωνήστε μαζί μας",
+                    namePlaceholder: "Το όνομά σας",
+                    emailPlaceholder: "Το email σας",
+                    messagePlaceholder: "Το μήνυμά σας",
+                    sendButton: "Αποστολή",
+                    rights: "Όλα τα δικαιώματα διατηρούνται."
+                }
+            };
+            
+        function setLanguage(lang) {
+    
+    document.querySelector("nav ul li:nth-child(1) a").innerText = translations[lang].navHome;
+    document.querySelector("nav ul li:nth-child(2) a").innerText = translations[lang].navProducts;
+    document.querySelector("nav ul li:nth-child(3) a").innerText = translations[lang].navAbout;
+    document.querySelector("nav ul li:nth-child(4) a").innerText = translations[lang].navContact;
+
+    // ❌ Αυτή η γραμμή διαγράφει το slider και πρέπει να αφαιρεθεί!
+    // document.querySelector(".hero").innerText = translations[lang].hero;
+
+    document.querySelector("#home h2").innerText = translations[lang].welcomeTitle;
+    document.querySelector("#home p").innerText = translations[lang].welcomeText;
+
+    document.querySelector("#products h2").innerText = translations[lang].productsTitle;
+    document.querySelector("#products h3").innerText = translations[lang].productName;
+    document.querySelector("#products .product p:nth-of-type(1)").innerText = translations[lang].productDesc;
+
+    document.querySelector("#about h2").innerText = translations[lang].historyTitle;
+    document.querySelector("#about p").innerText = translations[lang].historyDesc;
+
+    document.querySelector("#contact h2").innerText = translations[lang].contactTitle;
+    document.querySelector("#contact input[type='text']").placeholder = translations[lang].namePlaceholder;
+    document.querySelector("#contact input[type='email']").placeholder = translations[lang].emailPlaceholder;
+    document.querySelector("#contact textarea").placeholder = translations[lang].messagePlaceholder;
+    document.querySelector("#contact button").innerText = translations[lang].sendButton;
+
+    document.querySelector("footer p").innerHTML = "&copy; 2025 Mitselos Olive Oil - " + translations[lang].rights;
+}
+
+            </script>
+                 <script>
+  function addToCart() {
+    const productName = "Εξαιρετικό Παρθένο Ελαιόλαδο";
+    const productPrice = 24.99;
+    const productImg = "oliveoil.jpg";
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingProduct = cart.find(item => item.name === productName);
+
+    if (existingProduct) {
+        existingProduct.qty += 1;
+    } else {
+        cart.push({
+            name: productName,
+            price: Number(productPrice),
+            qty: 1,
+            img: productImg
+        });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // ✅ Ενημερώνουμε το νούμερο στο καλαθάκι
+    const cartCount = cart.reduce((total, item) => total + item.qty, 0);
+    const cartCountElement = document.getElementById("cart-count");
+    if (cartCountElement) {
+        cartCountElement.innerText = cartCount;
+    }
+
+    // ✅ Προαιρετικά κάνε alert
+    alert("Το προϊόν προστέθηκε στο καλάθι σας!");
+
+    // ✅ Και προαιρετικά μετάβαση στο cart
+    window.location.href = "cart.html";
+}
+
+
+</script>
+
+                </script>
+                <script>
+                    let lastScrollTop = 0;
+                    const header = document.getElementById("main-header");
+                    const nav = document.getElementById("main-nav");
+                    const logo = document.getElementById("logo-container");
+                    const langSwitcher = document.getElementById("language-switcher");
+
+                    window.addEventListener("scroll", function() {
+                        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        if (scrollTop > lastScrollTop) {
+                            header.classList.add("header-hidden");
+                            logo.classList.add("logo-hidden");
+            
+                        } else {
+                            header.classList.remove("header-hidden");
+                            logo.classList.remove("logo-hidden");
+                            
+                        }
+                        lastScrollTop = scrollTop;
+                    });
+                </script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        let slides = document.querySelectorAll('.slide');
+                        let currentSlide = 0;
+                        slides[currentSlide].classList.add('active');
+
+                    setInterval(function() {
+                        slides[currentSlide].classList.remove('active');
+                        currentSlide = (currentSlide + 1) % slides.length;
+                        slides[currentSlide].classList.add('active');
+                    }, 5000); // Κάθε 5 δευτερόλεπτα εναλλαγή
+});
+
+                </script> 
+          <script>
+            function acceptCookies() {
+                document.getElementById("cookie-banner").style.display = "none";
+                localStorage.setItem("cookiesAccepted", "true");
+                console.log("Cookies αποδεκτά. Αποθήκευση στο LocalStorage.");
+            }
+        
+            window.addEventListener("load", function() {
+                let cookieBanner = document.getElementById("cookie-banner");
+                console.log("Έλεγχος Cookie Banner:", cookieBanner); // ✅ Ελέγχουμε αν υπάρχει το στοιχείο
+        
+                if (!cookieBanner) {
+                    console.error("⚠️ Το στοιχείο cookie-banner ΔΕΝ υπάρχει στο DOM!");
+                    return;
+                }
+        
+                if (localStorage.getItem("cookiesAccepted") === "true") {
+                    console.log("✅ Τα cookies έχουν ήδη αποδεχτεί.");
+                    cookieBanner.style.display = "none";
+                } else {
+                    console.log("❌ Τα cookies ΔΕΝ έχουν αποδεχτεί ακόμα. Εμφάνιση banner.");
+                    cookieBanner.style.display = "flex"; // ✅ Εξασφαλίζουμε ότι εμφανίζεται
+                }
+            });
+        </script>        
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    const cartCount = cart.reduce((total, item) => total + item.qty, 0);
+                    document.getElementById("cart-count").innerText = cartCount;
+                });
+
+                </script>
+                <div class="floating-social-icons">
+                    <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/yourprofile" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a> 
+                </div>
+                
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        function updateScrollPadding() {
+                            const header = document.getElementById("main-header");
+                            if (header) {
+                                const headerHeight = header.offsetHeight;
+                                document.documentElement.style.scrollPaddingTop = headerHeight + "px";
+                            }
+                        }
+                    
+                        updateScrollPadding(); // Υπολογίζει αρχικά
+                    
+                        window.addEventListener("resize", updateScrollPadding); // Ξαναυπολογίζει αν αλλάξει μέγεθος το παράθυρο
+                    });
+                    </script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const product = document.querySelector('.product');
+                    
+                        function checkProductVisibility() {
+                            const rect = product.getBoundingClientRect();
+                            if (rect.top < window.innerHeight - 100) {
+                                product.classList.add('animate');
+                                window.removeEventListener('scroll', checkProductVisibility); // ✅ Μόλις ενεργοποιηθεί, σταματάει να ελέγχει
+                            }
+                        }
+                    
+                        window.addEventListener('scroll', checkProductVisibility);
+                        checkProductVisibility(); // Μην το ξεχάσουμε σε περίπτωση που φορτώσει ήδη στη μέση
+                    });
+                    </script>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const fadeElements = document.querySelectorAll('.fade-in-element');
+                        
+                            function checkFadeElements() {
+                                fadeElements.forEach(el => {
+                                    const rect = el.getBoundingClientRect();
+                                    if (rect.top < window.innerHeight - 100) {
+                                        el.classList.add('animate');
+                                    }
+                                });
+                            }
+                        
+                            window.addEventListener('scroll', checkFadeElements);
+                            checkFadeElements();
+                        });
+                        </script>
+
+                        <script>
+                            window.addEventListener("load", function() {
+                                document.querySelector(".hero-text").style.opacity = "1";
+                            });
+                            </script>
+                              
+                        
+        </body>
+</html>
