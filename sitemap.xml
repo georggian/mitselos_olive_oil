@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://georggian.github.io/mitselos_olive_oil/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://georggian.github.io/mitselos_olive_oil/cart.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://georggian.github.io/mitselos_olive_oil/news.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://georggian.github.io/mitselos_olive_oil/recipes.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://georggian.github.io/mitselos_olive_oil/privacy.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
