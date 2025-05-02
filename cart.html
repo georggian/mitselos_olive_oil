@@ -443,14 +443,26 @@ main {
 
 .cart-container {
   max-width: 900px;
-  margin: 160px auto 40px 30%; /* Top | Right | Bottom | Left */
+  width: 100%;
+  margin: 0 auto;
   background: white;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   min-height: 400px;
 }
-  
+
+.cart-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px; /* για να κατέβει κάτω από το fixed header */
+}
+
+.cart-container {
+  max-width: 900px;
+  width: 100%;
+}
+
     .cart-item {
       display: flex;
       align-items: center;
@@ -667,12 +679,14 @@ main {
         <button class="flag-btn" onclick="setLanguage('en')">
           <img src="uk-flag.png" alt="EN">
         </button>
-      </div> ψ
+      </div> 
 </header>
 
 <main>
+  <div class="cart-wrapper">
     <div class="cart-container" id="cart-container">
     <!-- Δυναμικό περιεχόμενο -->
+    </div>
     </div>
 </main>
 
