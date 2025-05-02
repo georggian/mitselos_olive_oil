@@ -437,17 +437,18 @@ nav ul li a:hover::after {
     border-radius: 50%;
     font-weight: bold;
 }
+main {
+  padding-top: 140px; /* Χώρος για να κατέβει κάτω από το fixed header */
+}
 
-    .cart-container {
-      max-width: 900px;
-      margin-top: 120px;
-      margin: 40px auto;
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      min-height: 400px;
-    }
+.cart-container {
+  max-width: 900px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  min-height: 400px;
+}
   
     .cart-item {
       display: flex;
@@ -617,6 +618,13 @@ nav ul li a:hover::after {
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  .cart-container {
+    margin-top: 200px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -659,11 +667,13 @@ nav ul li a:hover::after {
           <img src="uk-flag.png" alt="EN">
         </button>
       </div> 
-</header> 
-
-<div class="cart-container" id="cart-container">
-  <!-- Δυναμικό περιεχόμενο -->
-</div>
+</header>
+ 
+<main>
+    <div class="cart-container" id="cart-container">
+    <!-- Δυναμικό περιεχόμενο -->
+    </div>
+</main>
 
 <a href="index.html" class="back-to-shop" title="Επιστροφή στο κατάστημα">🏠</a>
 
