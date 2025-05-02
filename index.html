@@ -705,15 +705,15 @@ nav ul li a:hover::after {
               
         <nav id="main-nav">
             <ul>
-                <li><a href="#home">Αρχική</a></li>
-                <li><a href="#products">Προϊόντα</a></li>
-                <li><a href="#about">Η Ιστορία μας</a></li>
-                <li><a href="#contact">Επικοινωνία</a></li>
+                <li><a href="#home" id="navHome">Αρχική</a></li>
+                <li><a href="#products" id="navProducts">Προϊόντα</a></li>
+                <li><a href="#about" id="navAbout">Η Ιστορία μας</a></li>
+                <li><a href="#contact" id="navContact">Επικοινωνία</a></li>
                 <li class="dropdown">
-                    <a href="#">Newsletter</a>
+                    <a href="#" id="navNewsletter">Newsletter</a>
                     <ul class="dropdown-content">
-                        <li><a href="recipes.html">Συνταγές</a></li>
-                        <li><a href="news.html">Νέα</a></li>                        
+                        <li><a href="recipes.html" id="navRecipes">Συνταγές</a></li>
+                        <li><a href="news.html" id="navNews">Νέα</a></li>                        
                     </ul>
                   </li>
                   
@@ -750,13 +750,13 @@ nav ul li a:hover::after {
         </div>
         <div class="hero-text">
             <h1>Mitselos Olive Oil</h1>
-            <p>Η γεύση της Μεσσηνίας σε κάθε σταγόνα</p>
+            <p id="heroSubtitle">Η γεύση της Μεσσηνίας σε κάθε σταγόνα</p>
           </div>
     </div>
     <div class="main-background">
 
         <section id="home">
-            <small>Ανακαλύψτε την αυθεντικότητα</small>
+            <small id="homeSubtitle">Ανακαλύψτε την αυθεντικότητα</small>
             <h2>Καλώς ήρθατε στο Mitselos Olive Oil</h2>
             <p>Ένα ταξίδι γεύσης και παράδοσης από τη γη της Μεσσηνίας, κατευθείαν στο τραπέζι σας.  
             Premium ελληνικό ελαιόλαδο, φτιαγμένο με μεράκι και αφοσίωση.</p>
@@ -772,7 +772,7 @@ nav ul li a:hover::after {
             <p class="price">
                 <span class="amount">€24.99</span> <span class="unit">/ 750ml</span>
             </p>              
-            <button class="btn" onclick="addToCart()">Αγορά τώρα</button>
+            <button class="btn" id="buyNowBtn" onclick="addToCart()">Αγορά τώρα</button>
         </div>
     </section>
     
@@ -784,22 +784,25 @@ nav ul li a:hover::after {
             <img src="elaionas.jpg" alt="Οικογενειακός ελαιώνας" class="fade-in-element" style="width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
             <div class="fade-in-element" style="flex: 1;">
                 <h3 style="color: #a57b4a;">Οι Ρίζες μας</h3>
-                <p>Η ιστορία μας ξεκινά στο γραφικό χωριό Μηλιώτι, στην καρδιά της Μεσσηνίας. Εδώ, μέσα σε ελαιώνες αιώνων, ξεκίνησε το όνειρό μας για ένα λάδι που σέβεται τη φύση και την παράδοση.</p>
+                <p id="historyDesc1">Η ιστορία του ελαιολάδου μας ξεκινά στο γραφικό χωριό Μηλιώτι, στην καρδιά της Μεσσηνίας. Σε υψόμετρο 400 μέτρων, οι οικογενειακοί μας ελαιώνες δέχονται την ευλογία του ήλιου και του καθαρού,
+                     δροσερού αέρα, στοιχεία που προσδίδουν στο λάδι μας τη μοναδική του γεύση και το εξαιρετικό του άρωμα.</p>
             </div>
         </div>
     
-        <blockquote class="fade-in-element" style="margin: 40px auto; font-style: italic; font-size: 1.2rem; color: #8c6b45; max-width: 700px;">
-            "Κάθε σταγόνα κουβαλά τη σοφία αιώνων και την αγάπη της γης μας."
+        <blockquote class="fade-in-element" id="historyDesc3" style="margin: 40px auto; font-style: italic; font-size: 1.2rem; color: #8c6b45; max-width: 700px;">
+            "Κάθε σταγόνα από το ελαιόλαδό μας κλείνει μέσα της την ιστορία, την παράδοση και το πάθος της οικογένειάς μας, 
+            φέρνοντας στο τραπέζι σας τη γνήσια, ανόθευτη γεύση της Μεσσηνιακής γης."
         </blockquote>
     
         <div class="fade-in-element" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-top: 30px; flex-direction: row-reverse;">
             <img src="sigkomidi.jpg" alt="Συγκομιδή ελιών" style="width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
             <div class="fade-in-element" style="flex: 1;">
                 <h3 style="color: #a57b4a;">Η Παράδοση μας</h3>
-                <p>Για γενιές, καλλιεργούμε τους ίδιους ελαιώνες με σεβασμό. Με την τεχνική της ψυχρής έκθλιψης διατηρούμε αναλλοίωτες τις θρεπτικές ιδιότητες του ελαιόκαρπου.</p>
+                <p id="historyDesc2">Η οικογένεια ΓΙΑΝΝΟΠΟΥΛΟΥ, με βαθιά αγάπη για τη γη και σεβασμό στις παραδόσεις, καλλιεργεί εδώ και γενιές τις ίδιες ρίζες, εφαρμόζοντας τη μέθοδο της ψυχρής έκθλιψης, ώστε να διατηρούνται αναλλοίωτες όλες 
+                    οι θρεπτικές ιδιότητες του πολύτιμου καρπού.</p>
             </div>
         </div>
-    
+
         <div class="fade-in-element" style="margin-top: 50px;">
             <h3 style="color: #a57b4a;">Ο Χρόνος μας</h3>
             <ul style="list-style: none; padding: 0; margin-top: 20px;">
@@ -818,13 +821,13 @@ nav ul li a:hover::after {
         <div class="contact-container">
             <div class="contact-info">
                 <i class="fas fa-map-marker-alt"></i>
-                <h3>Διεύθυνση</h3>
-                <p>Αριστείδου 31 , Καλαμάτα</p>
+                <h3 id="contactAddressTitle">Διεύθυνση</h3>
+                <p>Αριστείδου , Καλαμάτα</p>
             </div>
     
             <div class="contact-info">
                 <i class="fas fa-phone-alt"></i>
-                <h3>Τηλέφωνα Επικοινωνίας</h3>
+                <h3 id="contactPhoneTitle">Τηλέφωνα Επικοινωνίας</h3>
                 <p>2721115142</p>
                 <p>6949393293</p>
                 <p>6949253429</p>
@@ -832,7 +835,7 @@ nav ul li a:hover::after {
     
             <div class="contact-info">
                 <i class="fas fa-envelope"></i>
-                <h3>Email</h3>
+                <h3 id="contactEmailTitle">Email</h3>
                 <p><a href="georggian10@gmail.com">georgian10@gmail.com</a></p>
 
             </div>
@@ -889,17 +892,22 @@ nav ul li a:hover::after {
                     navProducts: "Products",
                     navAbout: "Our Story",
                     navContact: "Contact",
+                    homeSubtitle: "Discover Authenticity",
                     hero: "Authentic Luxury from the Heart of Greece",
                     welcomeTitle: "Welcome to Mitselos Olive Oil",
                     welcomeText: "Premium Greek olive oil with tradition and quality.",
                     productsTitle: "Our Products",
+                    buyNow: "Buy Now",
                     productName: "Extra Virgin Olive Oil",
                     productDesc: "100% natural, cold-pressed, premium quality.",
                     historyTitle: "Our Story",
-                    historyDesc: "The story of our olive oil begins in the picturesque village of Milioti, in the heart of Messinia. At an altitude of 400 meters, our family-owned olive groves enjoy abundant sunshine and fresh, clean mountain air—key factors that give our olive oil its distinct flavor and exceptional aroma. " +
-             "For generations, the GIANNOPOULOS family has cultivated this land with deep respect for tradition, employing the cold-press method to preserve all the precious nutritional properties of the olives. " +
-             "Every drop of our olive oil embodies the heritage, passion, and authenticity of our family, bringing the pure, unspoiled taste of the Messinian countryside directly to your table.",
+                    historyDesc1: "The story of our olive oil begins in the picturesque village of Milioti, in the heart of Messinia. At an altitude of 400 meters, our family-owned olive groves enjoy abundant sunshine and fresh, clean mountain air—key factors that give our olive oil its distinct flavor and exceptional aroma. " ,
+                    historyDesc2: "For generations, the GIANNOPOULOS family has cultivated this land with deep respect for tradition, employing the cold-press method to preserve all the precious nutritional properties of the olives. " ,
+                    historyDesc3: "Every drop of our olive oil embodies the heritage, passion, and authenticity of our family, bringing the pure, unspoiled taste of the Messinian countryside directly to your table.",
                     contactTitle: "Contact us",
+                    contactAddressTitle: "Address",
+                    contactPhoneTitle: "Phone",
+                    contactEmailTitle: "Email",
                     namePlaceholder: "Your name",
                     emailPlaceholder: "Your email",
                     messagePlaceholder: "Your message",
@@ -913,15 +921,20 @@ nav ul li a:hover::after {
                     navContact: "Επικοινωνία",
                     hero: "Αυθεντική πολυτέλεια από την καρδιά της Ελλάδας",
                     welcomeTitle: "Καλώς ήρθατε στο Mitselos Olive Oil",
+                    homeSubtitle: "Ανακαλύψτε την αυθεντικότητα",
                     welcomeText: "Premium ελληνικό ελαιόλαδο με παράδοση και ποιότητα.",
                     productsTitle: "Τα Προϊόντα μας",
+                    buyNow: "Αγορά τώρα",
                     productName: "Εξαιρετικό Παρθένο Ελαιόλαδο",
                     productDesc: "100% φυσικό, ψυχρής έκθλιψης, εξαιρετικής ποιότητας.",
                     historyTitle: "Η Ιστορία μας",
-                    historyDesc: "Η ιστορία του ελαιολάδου μας ξεκινά στο γραφικό χωριό Μηλωτή, στην καρδιά της Μεσσηνίας. Σε υψόμετρο 400 μέτρων, οι οικογενειακοί μας ελαιώνες δέχονται την ευλογία του ήλιου και του καθαρού, δροσερού αέρα, στοιχεία που προσδίδουν στο λάδι μας τη μοναδική του γεύση και το εξαιρετικό του άρωμα. " +
-             "Η οικογένεια ΓΙΑΝΝΟΠΟΥΛΟΥ, με βαθιά αγάπη για τη γη και σεβασμό στις παραδόσεις, καλλιεργεί εδώ και γενιές τις ίδιες ρίζες, εφαρμόζοντας τη μέθοδο της ψυχρής έκθλιψης, ώστε να διατηρούνται αναλλοίωτες όλες οι θρεπτικές ιδιότητες του πολύτιμου καρπού. " +
-             "Κάθε σταγόνα από το ελαιόλαδό μας κλείνει μέσα της την ιστορία, την παράδοση και το πάθος της οικογένειάς μας, φέρνοντας στο τραπέζι σας τη γνήσια, ανόθευτη γεύση της Μεσσηνιακής γης.",
+                    historyDesc1: "Η ιστορία του ελαιολάδου μας ξεκινά στο γραφικό χωριό Μηλωτή, στην καρδιά της Μεσσηνίας. Σε υψόμετρο 400 μέτρων, οι οικογενειακοί μας ελαιώνες δέχονται την ευλογία του ήλιου και του καθαρού, δροσερού αέρα, στοιχεία που προσδίδουν στο λάδι μας τη μοναδική του γεύση και το εξαιρετικό του άρωμα. " ,
+                    historyDesc2: "Η οικογένεια ΓΙΑΝΝΟΠΟΥΛΟΥ, με βαθιά αγάπη για τη γη και σεβασμό στις παραδόσεις, καλλιεργεί εδώ και γενιές τις ίδιες ρίζες, εφαρμόζοντας τη μέθοδο της ψυχρής έκθλιψης, ώστε να διατηρούνται αναλλοίωτες όλες οι θρεπτικές ιδιότητες του πολύτιμου καρπού. " ,
+                    historyDesc3: "Κάθε σταγόνα από το ελαιόλαδό μας κλείνει μέσα της την ιστορία, την παράδοση και το πάθος της οικογένειάς μας, φέρνοντας στο τραπέζι σας τη γνήσια, ανόθευτη γεύση της Μεσσηνιακής γης.",
                     contactTitle: "Επικοινωνήστε μαζί μας",
+                    contactAddressTitle: "Διεύθυνση",
+                    contactPhoneTitle: "Τηλέφωνα Επικοινωνίας",
+                    contactEmailTitle: "Email",
                     namePlaceholder: "Το όνομά σας",
                     emailPlaceholder: "Το email σας",
                     messagePlaceholder: "Το μήνυμά σας",
@@ -930,34 +943,53 @@ nav ul li a:hover::after {
                 }
             };
             
-        function setLanguage(lang) {
-    
-    document.querySelector("nav ul li:nth-child(1) a").innerText = translations[lang].navHome;
-    document.querySelector("nav ul li:nth-child(2) a").innerText = translations[lang].navProducts;
-    document.querySelector("nav ul li:nth-child(3) a").innerText = translations[lang].navAbout;
-    document.querySelector("nav ul li:nth-child(4) a").innerText = translations[lang].navContact;
+            function setLanguage(lang) {
+    // Μενού
+    document.getElementById("navHome").innerText = translations[lang].navHome;
+    document.getElementById("homeSubtitle").innerText = translations[lang].homeSubtitle;
+    document.getElementById("navProducts").innerText = translations[lang].navProducts;
+    document.getElementById("navAbout").innerText = translations[lang].navAbout;
+    document.getElementById("navContact").innerText = translations[lang].navContact;
+    document.getElementById("navNewsletter").innerText = "Newsletter"; // ίδια στα EN/EL
+    document.getElementById("navRecipes").innerText = (lang === "en") ? "Recipes" : "Συνταγές";
+    document.getElementById("navNews").innerText = (lang === "en") ? "News" : "Νέα";
+    document.getElementById("buyNowBtn").innerText = translations[lang].buyNow;
 
-    // ❌ Αυτή η γραμμή διαγράφει το slider και πρέπει να αφαιρεθεί!
-    // document.querySelector(".hero").innerText = translations[lang].hero;
 
+    // Hero
+    document.getElementById("heroSubtitle").innerText = translations[lang].hero;
+
+    // Welcome section
     document.querySelector("#home h2").innerText = translations[lang].welcomeTitle;
     document.querySelector("#home p").innerText = translations[lang].welcomeText;
 
+    // Προϊόντα
     document.querySelector("#products h2").innerText = translations[lang].productsTitle;
     document.querySelector("#products h3").innerText = translations[lang].productName;
     document.querySelector("#products .product p:nth-of-type(1)").innerText = translations[lang].productDesc;
 
+    // Ιστορία
     document.querySelector("#about h2").innerText = translations[lang].historyTitle;
     document.querySelector("#about p").innerText = translations[lang].historyDesc;
+    document.getElementById("historyDesc1").innerText = translations[lang].historyDesc1;
+    document.getElementById("historyDesc2").innerText = translations[lang].historyDesc2;
+    document.getElementById("historyDesc3").innerText = translations[lang].historyDesc3;
 
+    // Επικοινωνία
     document.querySelector("#contact h2").innerText = translations[lang].contactTitle;
     document.querySelector("#contact input[type='text']").placeholder = translations[lang].namePlaceholder;
     document.querySelector("#contact input[type='email']").placeholder = translations[lang].emailPlaceholder;
     document.querySelector("#contact textarea").placeholder = translations[lang].messagePlaceholder;
     document.querySelector("#contact button").innerText = translations[lang].sendButton;
+    document.getElementById("contactAddressTitle").innerText = translations[lang].contactAddressTitle;
+    document.getElementById("contactPhoneTitle").innerText = translations[lang].contactPhoneTitle;
+    document.getElementById("contactEmailTitle").innerText = translations[lang].contactEmailTitle;
 
+
+    // Footer
     document.querySelector("footer p").innerHTML = "&copy; 2025 Mitselos Olive Oil - " + translations[lang].rights;
 }
+
 
             </script>
                  <script>
