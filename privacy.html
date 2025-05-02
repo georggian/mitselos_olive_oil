@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Πολιτική Απορρήτου - Mitselos Olive Oil</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fdfaf5;
+      color: #3c2e2e;
+      padding: 40px 20px;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      color: #a57b4a;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #7d5a3d;
+      margin-top: 30px;
+    }
+    .lang-switcher {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+    .lang-switcher button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      margin-left: 10px;
+      cursor: pointer;
+      color: #7d5a3d;
+    }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6e6e6e;
+    }
+    .flag-btn img {
+  width: 28px;   /* π.χ. αντί για 20px */
+  height: auto;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="lang-switcher">
+    <button onclick="setLang('el')">🇬🇷</button>
+    <button onclick="setLang('en')">🇬🇧</button>
+  </div>
+
+  <h1 id="title">Πολιτική Απορρήτου</h1>
+
+  <section>
+    <h2 id="section1Title">1. Ποιοι είμαστε</h2>
+    <p id="section1Text">Το Mitselos Olive Oil είναι μια οικογενειακή επιχείρηση με στόχο την προσφορά αυθεντικού ελληνικού ελαιολάδου υψηλής ποιότητας.</p>
+
+    <h2 id="section2Title">2. Τι δεδομένα συλλέγουμε</h2>
+    <p id="section2Text">Κατά την περιήγησή σας στον ιστότοπό μας, ενδέχεται να συλλέγονται cookies, διευθύνσεις email μέσω φόρμας επικοινωνίας και στατιστικά χρήσης (όπως προβολές σελίδων).</p>
+
+    <h2 id="section3Title">3. Χρήση των δεδομένων</h2>
+    <p id="section3Text">Τα δεδομένα χρησιμοποιούνται αποκλειστικά για σκοπούς εξυπηρέτησης, ενημέρωσης και βελτίωσης των υπηρεσιών μας. Δεν κοινοποιούνται σε τρίτους.</p>
+
+    <h2 id="section4Title">4. Cookies</h2>
+    <p id="section4Text">Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας. Μπορείτε να τα απενεργοποιήσετε μέσω των ρυθμίσεων του προγράμματος περιήγησής σας.</p>
+
+    <h2 id="section5Title">5. Επικοινωνία</h2>
+    <p id="section5Text">Για οποιαδήποτε ερώτηση ή αίτημα σχετικά με τα προσωπικά σας δεδομένα, επικοινωνήστε μαζί μας στο <a href="mailto:georgian10@gmail.com">georgian10@gmail.com</a>.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Mitselos Olive Oil - Όλα τα δικαιώματα διατηρούνται.
+  </footer>
+
+  <script>
+    const texts = {
+      el: {
+        title: "Πολιτική Απορρήτου",
+        section1Title: "1. Ποιοι είμαστε",
+        section1Text: "Το Mitselos Olive Oil είναι μια οικογενειακή επιχείρηση με στόχο την προσφορά αυθεντικού ελληνικού ελαιολάδου υψηλής ποιότητας.",
+        section2Title: "2. Τι δεδομένα συλλέγουμε",
+        section2Text: "Κατά την περιήγησή σας στον ιστότοπό μας, ενδέχεται να συλλέγονται cookies, διευθύνσεις email μέσω φόρμας επικοινωνίας και στατιστικά χρήσης (όπως προβολές σελίδων).",
+        section3Title: "3. Χρήση των δεδομένων",
+        section3Text: "Τα δεδομένα χρησιμοποιούνται αποκλειστικά για σκοπούς εξυπηρέτησης, ενημέρωσης και βελτίωσης των υπηρεσιών μας. Δεν κοινοποιούνται σε τρίτους.",
+        section4Title: "4. Cookies",
+        section4Text: "Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας. Μπορείτε να τα απενεργοποιήσετε μέσω των ρυθμίσεων του προγράμματος περιήγησής σας.",
+        section5Title: "5. Επικοινωνία",
+        section5Text: "Για οποιαδήποτε ερώτηση ή αίτημα σχετικά με τα προσωπικά σας δεδομένα, επικοινωνήστε μαζί μας στο <a href='mailto:georgian10@gmail.com'>georgian10@gmail.com</a>.",
+        footer: "&copy; 2025 Mitselos Olive Oil - Όλα τα δικαιώματα διατηρούνται."
+      },
+      en: {
+        title: "Privacy Policy",
+        section1Title: "1. Who we are",
+        section1Text: "Mitselos Olive Oil is a family-run business offering authentic high-quality Greek olive oil.",
+        section2Title: "2. What data we collect",
+        section2Text: "When browsing our website, we may collect cookies, email addresses via contact form, and usage statistics (like page views).",
+        section3Title: "3. Use of data",
+        section3Text: "Data is used solely for service, communication, and site improvement. We do not share your data with third parties.",
+        section4Title: "4. Cookies",
+        section4Text: "We use cookies to improve your experience. You can disable them through your browser settings.",
+        section5Title: "5. Contact",
+        section5Text: "For any questions or requests regarding your personal data, contact us at <a href='mailto:georgian10@gmail.com'>georgian10@gmail.com</a>.",
+        footer: "&copy; 2025 Mitselos Olive Oil - All rights reserved."
+      }
+    };
+
+    function setLang(lang) {
+      document.getElementById("title").innerText = texts[lang].title;
+      document.getElementById("section1Title").innerText = texts[lang].section1Title;
+      document.getElementById("section1Text").innerHTML = texts[lang].section1Text;
+      document.getElementById("section2Title").innerText = texts[lang].section2Title;
+      document.getElementById("section2Text").innerHTML = texts[lang].section2Text;
+      document.getElementById("section3Title").innerText = texts[lang].section3Title;
+      document.getElementById("section3Text").innerHTML = texts[lang].section3Text;
+      document.getElementById("section4Title").innerText = texts[lang].section4Title;
+      document.getElementById("section4Text").innerHTML = texts[lang].section4Text;
+      document.getElementById("section5Title").innerText = texts[lang].section5Title;
+      document.getElementById("section5Text").innerHTML = texts[lang].section5Text;
+      document.querySelector("footer").innerHTML = texts[lang].footer;
+    }
+
+    // Default to Greek
+    setLang('el');
+  </script>
+</body>
+</html>
