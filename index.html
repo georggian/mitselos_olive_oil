@@ -63,6 +63,83 @@ body {
     text-align: center;
 }
 
+/* Βελτιωμένο CSS για το globe */
+.globe-switcher {
+  position: absolute;
+  top: 15px;
+  right: 150px; /* ✅ Τοποθέτηση δεξιά */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1002; /* ✅ Πάνω από άλλα */
+}
+
+
+.globe-switcher:hover {
+  background: rgba(0,0,0,0.05); /* Προσθήκη background on hover */
+}
+
+.globe-icon {
+  font-size: 1.1rem; /* Μικρότερο μέγεθος όπως στις εικόνες */
+  color: #333;
+}
+
+.current-lang {
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.language-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 10px 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    min-width: 120px;
+}
+
+.globe-switcher:hover .language-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.language-option:hover {
+    background: rgba(165, 123, 74, 0.1);
+    padding-left: 20px;
+}
+
+.language-option img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.language-option span {
+    font-size: 0.9rem;
+    color: #4a3b2f;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -335,7 +412,7 @@ nav ul li a:hover::after {
         .language-switcher {
   position: absolute;
   top: 15px;
-  right: 110px;
+  right: 60px;
   display: flex;
   gap: 8px;
   z-index: 1001;
@@ -364,32 +441,60 @@ nav ul li a:hover::after {
 .cart-icon {
     position: absolute;
     top: 15px;
-    right: 80px;
-    font-size: 1.5rem;
+    right: 60px;
+    z-index: 1001;
 }
 
 .cart-icon a {
-    color: white;
-    text-decoration: none;
-    position: relative;
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: #4a3b2f;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.cart-icon a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
 }
 
 .cart-icon i {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    color: #a57b4a;
+}
+.cart-icon svg, .globe-icon svg {
+  height: 22px;
+  width: 22px;
+  fill: #a57b4a;
+}
+
+.cart-icon a:hover svg,
+.globe-icon:hover svg {
+    fill: #8c6b45;
 }
 
 #cart-count {
-    position: absolute;
-    top: -8px;
-    right: -10px;
-    background: red;
+    background: #a57b4a;
     color: white;
     font-size: 0.8rem;
-    padding: 4px 7px;
+    padding: 3px 8px;
     border-radius: 50%;
+    margin-left: 8px;
     font-weight: bold;
+}
+
+/* Animation when adding to cart */
+@keyframes cartBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+.cart-bounce {
+    animation: cartBounce 0.5s ease;
 }
 
 .cookie-banner {
@@ -685,6 +790,124 @@ nav ul li a:hover::after {
     transform: translateY(0);
 }
 
+.search-icon {
+  position: absolute;
+  top: 20px;
+  right: 200px; /* ✅ Τοποθέτηση πριν από το globe */
+  z-index: 1001;
+}
+
+.search-icon button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.search-icon button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.search-icon img {
+  height: 22px;
+  width: auto;
+  filter: brightness(0.4); /* ή αφαίρεσέ το αν δεν θέλεις σκοτεινή εμφάνιση */
+}
+
+.side-cart {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: white;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
+  transition: right 0.4s ease;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-cart.open {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.cart-footer {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.cart-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cart-buttons .btn,
+.cart-buttons .btn-outline {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.cart-buttons .btn {
+  background: #a57b4a;
+  color: white;
+}
+
+.cart-buttons .btn-outline {
+  border: 1.5px solid #a57b4a;
+  color: #a57b4a;
+  background: transparent;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 9998;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
     </style>
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -698,45 +921,86 @@ nav ul li a:hover::after {
     </div>
       
     <header id="main-header">
+        <!-- Λογότυπο -->
         <div class="logo-container">
-            <img src="favicon.png" alt="Λογότυπο" class="logo-img">
-            <a href="#home" class="logo-link"><h1>Mitselos Olive Oil</h1></a>
+          <img src="favicon.png" alt="Λογότυπο" class="logo-img">
+          <a href="#home" class="logo-link"><h1>Mitselos Olive Oil</h1></a>
         </div>
-              
+      
+        <!-- Κεντρικό Μενού Πλοήγησης -->
         <nav id="main-nav">
-            <ul>
-                <li><a href="#home" id="navHome">Αρχική</a></li>
-                <li><a href="#products" id="navProducts">Προϊόντα</a></li>
-                <li><a href="#about" id="navAbout">Η Ιστορία μας</a></li>
-                <li><a href="#contact" id="navContact">Επικοινωνία</a></li>
-                <li class="dropdown">
-                    <a href="#" id="navNewsletter">Newsletter</a>
-                    <ul class="dropdown-content">
-                        <li><a href="recipes.html" id="navRecipes">Συνταγές</a></li>
-                        <li><a href="news.html" id="navNews">Νέα</a></li>                        
-                    </ul>
-                  </li>
-                  
-            </ul>
+          <ul>
+            <li><a href="#home" id="navHome">Αρχική</a></li>
+            <li><a href="#products" id="navProducts">Προϊόντα</a></li>
+            <li><a href="#about" id="navAbout">Η Ιστορία μας</a></li>
+            <li><a href="#contact" id="navContact">Επικοινωνία</a></li>
+            <li class="dropdown">
+              <a href="#" id="navNewsletter">Newsletter</a>
+              <ul class="dropdown-content">
+                <li><a href="recipes.html" id="navRecipes">Συνταγές</a></li>
+                <li><a href="news.html" id="navNews">Νέα</a></li>
+              </ul>
+            </li>
+          </ul>
         </nav>
-    
+      
+        <!-- Εικονίδιο Καλαθιού -->
         <div class="cart-icon">
-            <a href="cart.html">
-                <i class="fas fa-shopping-cart"></i>
-                <span id="cart-count">0</span>
-            </a>
+          <a href="cart.html" aria-label="Καλάθι">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="22" height="22" fill="#a57b4a">
+              <path d="M52,16H44V12A12,12,0,0,0,20,12v4H12A4,4,0,0,0,8,20V52a8,8,0,0,0,8,8H48a8,8,0,0,0,8-8V20A4,4,0,0,0,52,16ZM24,12a8,8,0,0,1,16,0v4H24Zm28,40a4,4,0,0,1-4,4H16a4,4,0,0,1-4-4V21.33A7.86,7.86,0,0,0,16,22H48a7.86,7.86,0,0,0,4-.67Z"/>
+            </svg>
+            <span id="cart-count">0</span>
+          </a>
         </div>
+      
+        <!-- Εικονίδιο Αναζήτησης -->
+        <div class="search-icon">
+          <button id="searchToggle" aria-label="Αναζήτηση">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="22" height="22" fill="#a57b4a">
+              <path d="M28 4C15.85 4 6 13.85 6 26s9.85 22 22 22c5.3 0 10.2-1.9 14-5l16 16 4-4-16-16c3.1-3.8 5-8.7 5-14 0-12.15-9.85-22-22-22zm0 4c9.94 0 18 8.06 18 18s-8.06 18-18 18S10 35.94 10 26 18.06 8 28 8z"/>
+            </svg>
+          </button>
+        </div>
+      
+        <!-- Εναλλαγή Γλώσσας -->
+        <div class="globe-switcher">
+          <div class="globe-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="22" height="22" fill="#333">
+              <path d="M32 2C15.4 2 2 15.4 2 32s13.4 30 30 30 30-13.4 30-30S48.6 2 32 2zm0 4c7.2 0 13.7 2.9 18.4 7.6L32 32V6zm-4 1.1v22L9.6 14.4C14.3 9.7 20.6 7.1 28 7.1zM7.1 28h22L6 32c0-2.8.4-5.5 1.1-8zm0 8H29v22c-7.4 0-13.7-2.6-18.4-7.3C9.6 45.7 7.1 39.4 7.1 32zM32 58V36h22c0 7.4-2.6 13.7-7.3 18.4C45.7 55.4 39.4 58 32 58zm4-22V14l18.4 17.6C55.7 26.3 58 29.1 58 32H36z"/>
+            </svg>
+          </div>
+          <div class="language-options">
+            <div class="language-option" onclick="setLanguage('el')">
+              <img src="greece-flag.png" alt="Greek">
+              <span>Ελληνικά</span>
+            </div>
+            <div class="language-option" onclick="setLanguage('en')">
+              <img src="uk-flag.png" alt="English">
+              <span>English</span>
+            </div>
+          </div>
+        </div>
+      </header>        
     
-        <div class="language-switcher" id="language-switcher">
-            <button class="flag-btn" onclick="setLanguage('el')">
-              <img src="greece-flag.png" alt="GR">
-            </button>
-            <button class="flag-btn" onclick="setLanguage('en')">
-              <img src="uk-flag.png" alt="EN">
-            </button>
-          </div> 
-    </header>    
-    
+      <div id="side-cart" class="side-cart">
+        <div class="cart-header">
+          <h3>Καλάθι</h3>
+          <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+          <!-- Τα προϊόντα θα μπαίνουν εδώ δυναμικά -->
+        </div>
+        <div class="cart-footer">
+          <p id="cart-total">Σύνολο: €0.00</p>
+          <div class="cart-buttons">
+            <a href="cart.html" class="btn-outline">Προβολή Καλαθιού</a>
+            <a href="checkout.html" class="btn">Αγορά</a>
+          </div>
+        </div>
+      </div>
+      <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+      
     <!-- ✅ ΣΩΣΤΟ slider -->
     <div class="hero">
           
@@ -993,7 +1257,7 @@ nav ul li a:hover::after {
 
             </script>
                  <script>
-  function addToCart() {
+ function addToCart() {
     const productName = "Εξαιρετικό Παρθένο Ελαιόλαδο";
     const productPrice = 24.99;
     const productImg = "oliveoil.jpg";
@@ -1014,22 +1278,35 @@ nav ul li a:hover::after {
 
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    // ✅ Ενημερώνουμε το νούμερο στο καλαθάκι
-    const cartCount = cart.reduce((total, item) => total + item.qty, 0);
+    // Ενημέρωση counter με animation
     const cartCountElement = document.getElementById("cart-count");
     if (cartCountElement) {
+        const cartCount = cart.reduce((total, item) => total + item.qty, 0);
         cartCountElement.innerText = cartCount;
+        cartCountElement.classList.add("cart-bounce");
+        setTimeout(() => cartCountElement.classList.remove("cart-bounce"), 500);
     }
 
-    // ✅ Προαιρετικά κάνε alert
-    alert("Το προϊόν προστέθηκε στο καλάθι σας!");
-
-    // ✅ Και προαιρετικά μετάβαση στο cart
-    window.location.href = "cart.html";
+    // Προαιρετικό: Εμφάνιση μικρού popup
+    const notification = document.createElement("div");
+    notification.textContent = "✅ Προστέθηκε στο καλάθι";
+    notification.style.position = "fixed";
+    notification.style.bottom = "100px";
+    notification.style.right = "30px";
+    notification.style.backgroundColor = "#a57b4a";
+    notification.style.color = "white";
+    notification.style.padding = "10px 20px";
+    notification.style.borderRadius = "5px";
+    notification.style.zIndex = "10000";
+    notification.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.opacity = "0";
+        notification.style.transition = "opacity 0.5s ease";
+        setTimeout(() => notification.remove(), 500);
+    }, 2000);
 }
-
-
-</script>
 
                 </script>
                 <script>
@@ -1160,7 +1437,49 @@ nav ul li a:hover::after {
                                 document.querySelector(".hero-text").style.opacity = "1";
                             });
                             </script>
-                              
+                             
+                             <script>
+                                function toggleCart() {
+                                  document.getElementById("side-cart").classList.toggle("open");
+                                  document.getElementById("overlay").classList.toggle("active");
+                                }
+                                
+                                // Ενεργοποίηση όταν γίνεται click στο εικονίδιο καλαθιού
+                                document.querySelector(".cart-icon a").addEventListener("click", function(e) {
+                                  e.preventDefault(); // Μην πηγαίνει στο cart.html
+                                  toggleCart();
+                                  renderCartItems(); // Φόρτωσε δυναμικά τα προϊόντα
+                                });
+                                
+                                // Από localStorage (υπάρχει ήδη)
+                                function renderCartItems() {
+                                  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                                  const container = document.getElementById("cart-items");
+                                  const total = document.getElementById("cart-total");
+                                  container.innerHTML = "";
+                                
+                                  let sum = 0;
+                                
+                                  cart.forEach(item => {
+                                    const div = document.createElement("div");
+                                    div.style.marginBottom = "15px";
+                                    div.innerHTML = `
+                                      <div style="display:flex; gap: 10px; align-items:center;">
+                                        <img src="${item.img}" alt="${item.name}" style="width:50px; height:auto; border-radius:5px;">
+                                        <div>
+                                          <strong>${item.name}</strong><br>
+                                          ${item.qty} × €${item.price.toFixed(2)}
+                                        </div>
+                                      </div>
+                                    `;
+                                    container.appendChild(div);
+                                    sum += item.qty * item.price;
+                                  });
+                                
+                                  total.textContent = `Σύνολο: €${sum.toFixed(2)}`;
+                                }
+                                </script>
+                                
                         
         </body>
 </html>

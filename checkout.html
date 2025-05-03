@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Mitselos Olive Oil</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f0e6;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .checkout-container {
+      display: flex;
+      max-width: 1200px;
+      gap: 40px;
+    }
+
+    .form-section, .summary-section {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-section {
+      flex: 2;
+    }
+
+    .summary-section {
+      flex: 1;
+    }
+
+    h2 {
+      color: #a57b4a;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      background: #a57b4a;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #8c6b45;
+    }
+
+    .summary-section h3 {
+      margin-top: 0;
+    }
+
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+    }
+
+    .total {
+      font-weight: bold;
+      color: #a57b4a;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .cart-item img {
+      height: 60px;
+      border-radius: 6px;
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-info p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="checkout-container">
+    <div class="form-section">
+      <h2>Πληροφορίες Αποστολής</h2>
+      <form id="checkoutForm">
+        <input type="text" placeholder="Ονοματεπώνυμο" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Διεύθυνση" required>
+        <input type="text" placeholder="Πόλη" required>
+        <input type="text" placeholder="Ταχ. Κώδικας" required>
+        <input type="text" placeholder="Τηλέφωνο" required>
+        <button type="submit">Ολοκλήρωση Παραγγελίας</button>
+      </form>
+    </div>
+
+    <div class="summary-section">
+      <h3>Περίληψη Παραγγελίας</h3>
+      <div id="orderItems"></div>
+      <div class="summary-line"><span>Υποσύνολο:</span> <span id="subtotal">€0.00</span></div>
+      <div class="summary-line"><span>Μεταφορικά:</span> <span>Δωρεάν</span></div>
+      <div class="summary-line total"><span>Σύνολο:</span> <span id="total">€0.00</span></div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const orderItemsDiv = document.getElementById('orderItems');
+      const subtotalSpan = document.getElementById('subtotal');
+      const totalSpan = document.getElementById('total');
+
+      let subtotal = 0;
+
+      cart.forEach(item => {
+        const line = document.createElement('div');
+        line.classList.add('cart-item');
+
+        line.innerHTML = `
+          <img src="${item.img}" alt="${item.name}">
+          <div class="cart-item-info">
+            <p><strong>${item.name}</strong></p>
+            <p>Τεμάχια: ${item.qty}</p>
+            <p>Τιμή: €${(item.price).toFixed(2)}</p>
+          </div>
+        `;
+
+        subtotal += item.qty * item.price;
+        orderItemsDiv.appendChild(line);
+      });
+
+      subtotalSpan.innerText = `€${subtotal.toFixed(2)}`;
+      totalSpan.innerText = `€${subtotal.toFixed(2)}`;
+    });
+  </script>
+
+</body>
+</html>
