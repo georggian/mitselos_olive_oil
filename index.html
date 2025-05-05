@@ -58,7 +58,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4ede4;
+    background-color: #fcfbf9;
     color: #4a3b2f;
     text-align: center;
 }
@@ -151,10 +151,10 @@ header {
     grid-template-columns: 1fr auto 1fr;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.7); /* Διάφανο λευκό */
+    background: #ffffff; /* Κανονικό λευκό, χωρίς διαφάνεια */
     backdrop-filter: blur(8px); /* Θάμπωμα φόντου */
     color: #4a3b2f;
-    padding: 0.6rem 1.5rem;
+    padding: 1.0rem 1rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -166,7 +166,7 @@ header {
 /* Premium Λογότυπο */
 header h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 400;
     color: #a57b4a;
     margin: 0;
@@ -186,7 +186,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 nav ul li a {
@@ -264,11 +264,21 @@ nav ul li a:hover::after {
     transition: opacity 1.5s ease, transform 1.5s ease; /* ✨ πρόσθεσα transform transition εδώ */
 }
 
-.hero-text h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3.5rem;
-  margin: 0;
+.hero-text img {
+  max-height: 400px; /* ✅ Μεγαλύτερο ύψος */
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.4)); /* Ελαφρύ βάθος */
+  transition: transform 0.3s ease;
 }
+
+.hero-text img:hover {
+  transform: scale(1.05); /* Ήπιο zoom στο hover */
+}
+
+
 
 .hero-text p {
   font-size: 1.4rem;
@@ -653,39 +663,62 @@ nav ul li a:hover::after {
 
 .logo-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-self: start;
-  margin-left: 20px;
-  text-align: center;
+  gap: 15px;
+  margin-left: 60px;
 }
 
 .logo-img {
-  height: 60px; /* Πιο μικρό για να μην καλύπτει το header */
+  height: 60px;
   width: auto;
-  margin-bottom: 5px; /* Λίγο κενό ανάμεσα στο δέντρο και στο κείμενο */
+  transform: scale(2.5);
+  transform-origin: center center; /* ✅ Κέντρο για να μη ξεφεύγει προς τα πάνω */
+  margin-top: 10px; /* ✅ Προσθέτει κενό πάνω από το logo ώστε να μην κόβεται */
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+  transition: transform 0.3s ease;
 }
 
-.logo-container h1 {
-  font-size: 2.2rem; /* Λίγο πιο μικρό αλλά elegant */
-  color: #a57b4a;
-  font-family: 'Great Vibes', cursive;
-  font-weight: 400;
+
+.logo-img:hover {
+  transform: scale(2.2);
+}
+
+
+@media (max-width: 768px) {
+  .logo-img {
+    transform: scale(1.3); /* μικρότερο σε κινητά */
+  }
+
+  .logo-img:hover {
+    transform: scale(1.45);
+  }
+}
+
+.brand-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.brand-name .main {
+  color: #4a3b2f;
+}
+
+.brand-name .sub {
+  color: #a57b4a;
+  font-weight: 500;
 }
 
 .logo-link {
-  text-decoration: none; /* Βγάζει την υπογράμμιση */
+  text-decoration: none;
 }
 
-.logo-link h1 {
-  color: #a57b4a;
-  transition: color 0.3s ease;
-}
-
-.logo-link:hover h1 {
-  color: #8c6b45; /* Αλλάζει χρώμα στο hover για καλύτερη αίσθηση */
-}
 
 .dropdown {
   position: relative;
@@ -923,9 +956,11 @@ nav ul li a:hover::after {
     <header id="main-header">
         <!-- Λογότυπο -->
         <div class="logo-container">
-          <img src="favicon.png" alt="Λογότυπο" class="logo-img">
-          <a href="#home" class="logo-link"><h1>Mitselos Olive Oil</h1></a>
-        </div>
+            <a href="#home" class="logo-link">
+              <img src="IMG_3566.PNG" alt="Mitselos Logo" class="logo-img">
+            </a>
+          </div>          
+          
       
         <!-- Κεντρικό Μενού Πλοήγησης -->
         <nav id="main-nav">
@@ -1005,17 +1040,17 @@ nav ul li a:hover::after {
     <div class="hero">
           
         <div class="slider">
-            <img src="image1.jpg" class="slide active" alt="Εικόνα 1">
-            <img src="image2.jpg" class="slide" alt="Εικόνα 2">
-            <img src="image3.jpg" class="slide" alt="Εικόνα 3">
-            <img src="image4.jpg" class="slide" alt="Εικόνα 4">
-            <img src="image5.jpg" class="slide" alt="Εικόνα 5">
-            <img src="image6.jpg" class="slide" alt="Εικόνα 6">
+            <img src="image2.jpg" class="slide active" alt="Εικόνα 1">
+            <img src="image3.jpg" class="slide" alt="Εικόνα 2">
+            <img src="image4.jpg" class="slide" alt="Εικόνα 3">
+            <img src="image5.jpg" class="slide" alt="Εικόνα 4">
+            
         </div>
         <div class="hero-text">
-            <h1>Mitselos Olive Oil</h1>
+            <img src="IMG_3566.PNG" alt="Mitselos Logo" style="max-height: 400px; margin-bottom: 15px;">
             <p id="heroSubtitle">Η γεύση της Μεσσηνίας σε κάθε σταγόνα</p>
-          </div>
+        </div>
+        
     </div>
     <div class="main-background">
 
@@ -1480,6 +1515,5 @@ nav ul li a:hover::after {
                                 }
                                 </script>
                                 
-                        
         </body>
 </html>
